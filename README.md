@@ -1,7 +1,7 @@
 # Solr Security Configuration Password Generator
 This bash script simplifies the process of generating secure passwords for your Solr instance's security.json file. Ensure the robustness of your Solr security by effortlessly creating strong passwords with the help of this tool.
 
-With this script you can generate new passwort without using the API
+With this script you can generate new passwort without using the API.
 
 We all know that generating a password for Solr when deploying Sitecore it is the first step for a better security.
 
