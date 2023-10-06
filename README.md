@@ -22,4 +22,18 @@ secret=$(./generate_config.sh SolrRocks)
 sed -i "s/%REPLACE%/$secret/" ./security.json
 ```
 
-After you upload the new security.json make sure you restart Solr service
+This will generate a security.json like in the example here https://solr.apache.org/guide/7_1/basic-authentication-plugin.html but of course the salt will change. 
+```json
+{
+"authentication":{ 
+   "blockUnknown": true, 
+   "class":"solr.BasicAuthPlugin",
+   "credentials":{"solr":"IV0EHq1OnNrj6gvRCwvFwTrZ1+z1oBbnQdiVC3otuq0= Ndd7LKvVBAaZIF0QAVi1ekCfAJXr1GGfLtRUXhgrF8c="} 
+},
+"authorization":{
+   "class":"solr.RuleBasedAuthorizationPlugin",
+   "permissions":[{"name":"security-edit",
+      "role":"admin"}], 
+   "user-role":{"solr":"admin"} 
+}}
+```
