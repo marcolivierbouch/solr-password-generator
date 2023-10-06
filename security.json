@@ -1,0 +1,25 @@
+
+"auditlogging": {
+    "class":"solr.SolrLogAuditLoggerPlugin",
+    "async":true,
+    "blockAsync":false,
+    "numThreads":2,
+    "queueSize":4096,
+    "eventTypes":[
+      "REJECTED",
+      "ANONYMOUS_REJECTED",
+      "UNAUTHORIZED",
+      "COMPLETED",
+      "ERROR"]},
+  "authentication":{
+    "class":"solr.BasicAuthPlugin",
+    "credentials":{"solr":"%REPLACE%"},
+    "":{"v":0},
+    "blockUnknown":true},
+  "authorization":{
+    "class":"solr.RuleBasedAuthorizationPlugin",
+    "permissions":[{
+        "name":"security-edit",
+        "role":"admin"}],
+    "user-role":{"solr":"admin"}
+}}
