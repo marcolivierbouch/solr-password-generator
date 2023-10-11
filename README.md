@@ -7,6 +7,8 @@ We all know that generating a password for Solr when deploying Sitecore it is th
 
 See more information here about Solr Basic Authentication Plugin: https://solr.apache.org/guide/7_1/basic-authentication-plugin.html 
 
+Ref: https://gist.github.com/rmalchow/51f5b23c2f59c687b001bfcdbf4bad5c
+
 ## Requirements
 Before diving in, make sure to install pwgen using the following command:
 
