@@ -58,7 +58,7 @@ After obtaining the secret, use it to generate the configuration and update the 
 
 ```bash
 password=$(./generate_config.sh "$secret")
-sed -i "s/%REPLACE%/$password/" ./security.json
+sed -i "s~%REPLACE%~$password~" ./security.json
 ```
 
 3. Deploy Updated Configuration to Solr:
